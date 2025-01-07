@@ -1,0 +1,15 @@
+targets:
+  $default:
+    sources:
+      - swaggers/**
+      - lib/**
+    builders:
+      chopper_generator:
+        options:
+          header: "//Generated code"
+      swagger_dart_code_generator:
+        options:
+          input_folder: "swaggers/"
+          output_folder: "lib/swagger_generated_code/"
+          separate_models: true
+          use_default_null_for_lists: false
